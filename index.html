@@ -36,7 +36,7 @@
     </head>
 
     <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#0a2342]/50 backdrop-blur-md shadow-sm">
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0a2342] shadow-sm">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <div class="flex items-center">
             <img src="https://rafatek.co.id/images/logo.jpeg" alt="RafaTek Logo" class="h-12">
@@ -50,17 +50,21 @@
             <a href="#contact" class="font-medium text-white hover:text-blue-200 transition">Kontak</a>
         </nav>
 
-        <button  id="menu-btn" class="md:hidden text-white">
-            <i data-feather="menu"></i>
+                <button id="menu-btn" class="md:hidden text-white z-50 relative">
+        <i data-feather="menu"></i>
         </button>
-        </div>
 
-        <div id="mobile-menu" class="hidden flex-col bg-[#0a2342]/90 backdrop-blur-md md:hidden px-6 py-4 space-y-4">
-            <a href="#home" class="block font-medium text-white hover:text-blue-200 transition">Beranda</a>
-            <a href="#about" class="block font-medium text-white hover:text-blue-200 transition">Tentang Kami</a>
-            <a href="#services" class="block font-medium text-white hover:text-blue-200 transition">Layanan</a>
-            <a href="#packages" class="block font-medium text-white hover:text-blue-200 transition">Paket Internet</a>
-            <a href="#contact" class="block font-medium text-white hover:text-blue-200 transition">Kontak</a>
+        <!-- Fullscreen Mobile Menu -->
+        <div id="mobile-menu" 
+            class="fixed inset-0 bg-[#0a2342] backdrop-blur-md hidden 
+                    flex flex-col items-center justify-center space-y-6
+                    transform -translate-y-full transition-transform duration-500 ease-in-out z-40">
+
+        <a href="#home" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Beranda</a>
+        <a href="#about" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Tentang Kami</a>
+        <a href="#services" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Layanan</a>
+        <a href="#packages" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Paket Internet</a>
+        <a href="#contact" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Kontak</a>
         </div>
     </header>
 
@@ -79,7 +83,7 @@
                 Solusi Teknologi Terdepan untuk Bisnis Anda
             </h1>
             <p class="text-base sm:text-lg mb-8">
-                Menyediakan layanan internet berkualitas tinggi dan solusi IT terintegrasi untuk mendukung pertumbuhan bisnis Anda.
+                Menyediakan layanan internet berkualitas tinggi dan solusi IT terintegrasi untuk mendukung  pertumbuhan bisnis Anda.
             </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#packages" 
@@ -354,7 +358,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-12">
+        <footer class="bg-[#0a2342] text-white py-12">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between">
                     <div class="mb-8 md:mb-0">
@@ -419,31 +423,63 @@
             <i data-feather="message-circle" class="w-6 h-6"></i>
         </a>
 
+
+        <!-- Burger Button -->
+<button id="menu-btn" class="md:hidden text-white z-50 relative">
+  <i data-feather="menu"></i>
+</button>
+
+
+
         <script>
-            feather.replace();
+        feather.replace();
 
-            // Mobile menu toggle
-            document.addEventListener('DOMContentLoaded', function () {
-                const menuBtn = document.getElementById('menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const links = mobileMenu.querySelectorAll('a');
+            let isOpen = false;
 
-                menuBtn.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
+            menuBtn.addEventListener('click', function () {
+            if (!isOpen) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                mobileMenu.classList.remove('-translate-y-full');
+                // fade in link satu-satu
+                links.forEach((link, i) => {
+                    setTimeout(() => link.classList.add('opacity-100'), i * 150);
                 });
-
-                // Smooth scroll
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                    });
-                    // Tutup menu setelah klik
-                    mobileMenu.classList.add('hidden');
-                });
-                });
+                }, 10);
+            } else {
+                mobileMenu.classList.add('-translate-y-full');
+                links.forEach(link => link.classList.remove('opacity-100'));
+                setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                }, 500);
+            }
+            isOpen = !isOpen;
             });
+
+            // Smooth scroll + auto close
+            links.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+                });
+
+                // Tutup menu
+                mobileMenu.classList.add('-translate-y-full');
+                links.forEach(link => link.classList.remove('opacity-100'));
+                setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                }, 500);
+                isOpen = false;
+            });
+            });
+        });
         </script>
+
 
     </body>
     </html>
