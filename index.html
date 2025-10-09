@@ -101,19 +101,16 @@
         <a href="#home" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Beranda</a>
         <a href="#about" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Tentang Kami</a>
         <a href="#services" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Layanan</a>
-        <a href="#packages" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Paket Internet</a>
+        <a href="#packages" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Voucher Internet</a>
         <a href="#contact" class="text-2xl font-medium text-white opacity-0 transition-opacity duration-500">Kontak</a>
         </div>
     </header>
 
     <!-- Hero Section -->
         <section id="home" 
-        class="relative min-h-[90vh] bg-cover bg-center flex items-center justify-center" 
-        style="background-image: url('rafatek.jpeg'); background-size: cover; background-position: center;">
-        
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-[#0a2342]/70"></div>
+         class="relative min-h-screen flex items-center justify-center bg-[#0a2342] bg-cover bg-center">
 
+         
         <!-- Content -->
         <div class="relative z-10 container mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
             <div class="md:w-2/3 lg:w-1/2 text-white">
@@ -125,14 +122,14 @@
             </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#packages" 
-            class="bg-white text-blue-600 hover:bg-blue-600 hover:text-white 
+            class="bg-white text-[#0a2342] hover:bg-[#0a2342]  hover:text-white 
                     px-6 py-3 rounded-lg font-medium 
                     transition duration-300 transform hover:scale-105 hover:shadow-lg">
             Lihat Paket Internet
             </a>
 
                 <a href="#contact" 
-                    class="border border-white text-white hover:bg-white hover:text-blue-600 
+                    class="border border-white text-white hover:bg-white hover:text-[#0a2342]
                             px-6 py-3 rounded-lg font-medium 
                             transition duration-300 transform hover:scale-105 hover:shadow-lg">
                     Hubungi Kami
@@ -217,110 +214,77 @@
         </section>
 
         <!-- Packages Section -->
-        <section id="packages" class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold mb-4">Paket Internet</h2>
-                    <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Pilih paket internet yang sesuai dengan kebutuhan bisnis Anda</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Package 1 -->
-                    <div class="package-card bg-white border border-gray-200 rounded-lg shadow-md p-8 transition duration-300">
-                        <h3 class="text-xl font-bold mb-2">Paket Basic</h3>
-                        <p class="text-gray-500 mb-6">Cocok untuk penggunaan pribadi</p>
-                        <div class="text-4xl font-bold mb-6">Rp175.000<span class="text-lg font-normal">/bulan</span></div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Kecepatan 10 Mbps</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>1-5 Perangkat terhubung</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Unlimited Quota</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Dukungan teknis 24/7</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20dengan%20Paket%20Basic" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">Pesan via WhatsApp</a>
-                    </div>
-                    
-                    <!-- Package 2 -->
-                    <div class="package-card bg-white border-2 border-blue-500 rounded-lg shadow-lg p-8 transition duration-300 transform scale-105">
-                        <div class="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg">Populer</div>
-                        <h3 class="text-xl font-bold mb-2">Paket Advance</h3>
-                        <p class="text-gray-500 mb-6">Ideal untuk bisnis kecil</p>
-                        <div class="text-4xl font-bold mb-6">Rp220.000<span class="text-lg font-normal">/bulan</span></div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Kecepatan 20 Mbps</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>1-10 Perangkat terhubung</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Unlimited Quota</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Prioritas jaringan</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Dukungan teknis 24/7</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20dengan%20Paket%20Advance" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">Pesan via WhatsApp</a>
-                    </div>
-                    
-                    <!-- Package 3 -->
-                    <div class="package-card bg-white border border-gray-200 rounded-lg shadow-md p-8 transition duration-300">
-                        <h3 class="text-xl font-bold mb-2">Paket Executive</h3>
-                        <p class="text-gray-500 mb-6">Untuk kebutuhan bisnis besar</p>
-                        <div class="text-4xl font-bold mb-6">Rp300.000<span class="text-lg font-normal">/bulan</span></div>
-                        
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Kecepatan 30 Mbps</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>1-15 Perangkat terhubung</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Unlimited Quota</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Prioritas jaringan tinggi</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i data-feather="check" class="text-green-500 mr-2"></i>
-                                <span>Dukungan teknis 24/7</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="https://wa.me/628123456789?text=Saya%20tertarik%20dengan%20Paket%20Executive" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">Pesan via WhatsApp</a>
-                    </div>
-                </div>
+        <section id="packages" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Voucher Internet WiFi</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                Akses internet cepat, stabil, dan hemat sesuai kebutuhan Anda
+            </p>
             </div>
+
+            <!-- Paket -->
+            <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Paket 1 Hari -->
+            <div class="relative bg-white border border-gray-200 rounded-2xl shadow-md p-8 
+                        transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Voucher 1 Hari</h3>
+                <p class="text-gray-500 mb-6">Cocok untuk penggunaan singkat</p>
+                <div class="text-4xl font-extrabold text-blue-600 mb-6">Rp10.000</div>
+                <ul class="space-y-3 text-gray-700 flex-grow">
+                <li class="flex items-center"><i data-feather="wifi" class="text-blue-600 mr-2"></i> Kecepatan 10 Mbps</li>
+                <li class="flex items-center"><i data-feather="smartphone" class="text-blue-600 mr-2"></i> Hingga 3 perangkat</li>
+                <li class="flex items-center"><i data-feather="infinity" class="text-blue-600 mr-2"></i> Kuota Unlimited</li>
+                </ul>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20pesan%20Voucher%201%20Hari" 
+                class="mt-8 block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">
+                Pesan Sekarang
+                </a>
+            </div>
+
+            <!-- Paket 3 Hari -->
+            <div class="relative bg-white border border-gray-200 rounded-2xl shadow-md p-8 
+                        transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Voucher 3 Hari</h3>
+                <p class="text-gray-500 mb-6">Pilihan hemat untuk liburan</p>
+                <div class="text-4xl font-extrabold text-blue-600 mb-6">Rp25.000</div>
+                <ul class="space-y-3 text-gray-700 flex-grow">
+                <li class="flex items-center"><i data-feather="wifi" class="text-blue-600 mr-2"></i> Kecepatan 20 Mbps</li>
+                <li class="flex items-center"><i data-feather="smartphone" class="text-blue-600 mr-2"></i> Hingga 5 perangkat</li>
+                <li class="flex items-center"><i data-feather="infinity" class="text-blue-600 mr-2"></i> Kuota Unlimited</li>
+                <li class="flex items-center"><i data-feather="headphones" class="text-blue-600 mr-2"></i> Dukungan teknis</li>
+                </ul>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20pesan%20Voucher%203%20Hari" 
+                class="mt-8 block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">
+                Pesan Sekarang
+                </a>
+            </div>
+
+            <!-- Paket 1 Minggu -->
+            <div class="relative bg-white border border-gray-200 rounded-2xl shadow-md p-8 
+                        transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Voucher 1 Minggu</h3>
+                <p class="text-gray-500 mb-6">Solusi hemat untuk mingguan</p>
+                <div class="text-4xl font-extrabold text-blue-600 mb-6">Rp50.000</div>
+                <ul class="space-y-3 text-gray-700 flex-grow">
+                <li class="flex items-center"><i data-feather="wifi" class="text-blue-600 mr-2"></i> Kecepatan 30 Mbps</li>
+                <li class="flex items-center"><i data-feather="smartphone" class="text-blue-600 mr-2"></i> Hingga 10 perangkat</li>
+                <li class="flex items-center"><i data-feather="infinity" class="text-blue-600 mr-2"></i> Kuota Unlimited</li>
+                <li class="flex items-center"><i data-feather="shield" class="text-blue-600 mr-2"></i> Keamanan Jaringan</li>
+                </ul>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20pesan%20Voucher%201%20Minggu" 
+                class="mt-8 block bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition">
+                Pesan Sekarang
+                </a>
+            </div>
+
+            </div>
+        </div>
         </section>
+
 
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-50">
@@ -470,24 +434,28 @@
         </footer>
 
         <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/628123456789" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg floating-whatsapp">
-        <i data-feather="message-circle" class="w-6 h-6"></i>
+        <a href="https://wa.me/628123456789" 
+        class="fixed bottom-5 right-5 bg-green-500 text-white w-10 h-10 flex items-center justify-center 
+                rounded-full shadow-md hover:shadow-lg transition transform hover:scale-105 z-50">
+            <i data-feather="message-circle" class="w-5 h-5"></i>
         </a>
 
         <!-- Floating Navigation Buttons -->
-        <div class="fixed bottom-24 right-6 flex flex-col space-y-3 z-50">
-        <!-- Scroll to Top -->
-        <button id="toTopBtn" 
-                class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110">
-            <i data-feather="arrow-up"></i>
-        </button>
+        <div class="fixed bottom-20 right-5 flex flex-col space-y-2 z-50">
+            <!-- Scroll to Top -->
+            <button id="toTopBtn" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 flex items-center justify-center 
+                        rounded-full shadow-md hover:shadow-lg transition transform hover:scale-105">
+                <i data-feather="arrow-up" class="w-5 h-5"></i>
+            </button>
 
-        <!-- Scroll to Bottom -->
-        <button id="toBottomBtn" 
-                class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110">
-            <i data-feather="arrow-down"></i>
-        </button>
-        </div
+            <!-- Scroll to Bottom -->
+            <button id="toBottomBtn" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 flex items-center justify-center 
+                        rounded-full shadow-md hover:shadow-lg transition transform hover:scale-105">
+                <i data-feather="arrow-down" class="w-5 h-5"></i>
+            </button>
+        </div>
 
 
         <!-- Burger Button -->
